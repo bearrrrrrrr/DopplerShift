@@ -181,3 +181,7 @@ datum/map_template/shuttle/emergency/rollerdome
 /obj/item/clothing/under/rank/prisoner/skirt
 	name = "prison jumpskirt"
 	desc = "Standardised 4CA prisoner-wear. Has an ID tag at the back. Its suit sensors are stuck in the \"Fully On\" position."
+
+/obj/item/skeleton_key
+	name = "skeleton key"
+	desc = "An artifact usually found in the hands of the natives of the planet below, which the 4CA is benevolently advancing!"

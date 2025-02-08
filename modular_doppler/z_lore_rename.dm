@@ -1,5 +1,5 @@
-//hello! giant .dm that just modularly renames items from nanotrasen to port authority/regional administration/etc,.
-//nonmodular edits are marked with //NONMODULAR DOPLER EDIT START and //NONMODULAR DOPLER EDIT END respectively
+//hello! .dm that just modularly renames items from nanotrasen to port authority/regional administration/etc,.
+//nonmodular edits are ideally marked with //NONMODULAR DOPPLER EDIT START and //NONMODULAR DOPPLER EDIT END respectively
 //spessman be vigilant. we loved you.
 
 
@@ -117,7 +117,7 @@ datum/map_template/shuttle/emergency/rollerdome
 
 /obj/structure/showcase/machinery/microwave_engineering
 	name = "\improper Port Authority Wave(tm) microwave"
-	desc = "For those who thought the Port Authority couldn't improve on their famous microwave, this model features Wave™! A Port Authority exclusive, Wave™ allows your PDA to be charged wirelessly through microwave frequencies. Because nothing says 'future' like charging your PDA while overcooking your leftovers. Authority Wave™ - Multitasking, redefined. This product was pulled from shelves after multiple station-wide fires."
+	desc = "For those who thought the Port Authority couldn't improve on their famous microwave, this model features Waveâ„¢! A Port Authority exclusive, Waveâ„¢ allows your PDA to be charged wirelessly through microwave frequencies. Because nothing says 'future' like charging your PDA while overcooking your leftovers. Authority Waveâ„¢ - Multitasking, redefined. This product was pulled from shelves after multiple station-wide fires."
 
 /obj/structure/showcase/perfect_employee
 	name = "'Perfect Man' employee exhibit"

@@ -5,13 +5,17 @@
 
 /mob/living/basic/cockroach/glockroach
 	name = "synthroach"
-	desc = "Biosynth pests, originally dating back to the civil war that destroyed the Third Celestial Accord. Originally dog-sized, heavily-plated beasts, now grounded by evolutionarily purposeless march of cytosine to uracil to thymine over hundreds of years."
-	icon = 'icons/mob/simple/animal.dmi'
+	desc = "Level-two biosynth pests, originating from an old border-skirmish. Once dog-sized, heavily-plated beasts, now grounded by evolutionarily purposeless march of cytosine to uracil to thymine over hundreds of years."
+	icon = 'modular_doppler/modular_mobs/simple_animal/synthroach.dmi'
+	icon_state = "synthroach"
+	icon_dead = "synthroach_no_animation"
 
 /mob/living/basic/cockroach/hauberoach
 	name = "spikeroach"
-	desc = "Synthroach. Sacrificial idiot. Practically trying to run under your boots. Beeps ominously. Feels, generally, like a bad idea. Too late to take it back, unfortunately."
+	desc = "Synthroach. Sacrificial idiot. Practically trying to run under your boots. Beeps ominously. Its entire body is a crumple zone containing very fun mixtures of small-scale ordinance. Feels, generally, like a bad idea."
+	icon_state = "spikeroach"
 
 /mob/living/basic/cockroach/glockroach/mobroach
 	name = "gunroach"
-	desc = "Primordial biosynth-weaponry trapped in a cylinder of frenetically-firing silicon tetrachlorides. Purposeless hate for a civil war that ended a long time ago. No reparations were paid to it."
+	desc = "Primordial biosynth-weaponry trapped in a cylinder of frenetically-firing silicon tetrachlorides. Purposeless hate for a civil war that ended a long time ago. No reparations were paid to it. Also; literally frothing at the mouth to shoot you."
+	icon_state = "gunroach"

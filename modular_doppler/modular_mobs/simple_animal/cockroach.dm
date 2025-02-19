@@ -13,9 +13,12 @@
 /mob/living/basic/cockroach/hauberoach
 	name = "spikeroach"
 	desc = "Synthroach. Sacrificial idiot. Practically trying to run under your boots. Beeps ominously. Its entire body is a crumple zone containing very fun mixtures of small-scale ordinance. Feels, generally, like a bad idea."
+	icon = 'modular_doppler/modular_mobs/simple_animal/synthroach.dmi'
 	icon_state = "spikeroach"
+	icon_dead = "synthroach_no_animation"
 
 /mob/living/basic/cockroach/glockroach/mobroach
 	name = "gunroach"
-	desc = "Primordial biosynth-weaponry trapped in a cylinder of frenetically-firing silicon tetrachlorides. Purposeless hate for a civil war that ended a long time ago. No reparations were paid to it. Also; literally frothing at the mouth to shoot you."
+	desc = "Primordial biosynth-weaponry trapped in a cylinder of frenetically-firing silicon tetrachlorides. Purposeless once-weapon for a battle that ended a long time ago. No reparations were paid to it. More pressingly; literally frothing at the mouth to shoot you."
+	icon = 'modular_doppler/modular_mobs/simple_animal/synthroach.dmi'
 	icon_state = "gunroach"

@@ -12,3 +12,24 @@
 
 /datum/antag_faction_item/echoes
 	faction = /datum/antag_faction/echoes
+
+/datum/antag_faction_item/echoes/rcd
+	name = "Industrial RCD"
+	description = "An RCD straight from the EDL's storage. "
+	item = /obj/item/construction/rcd/combat
+	cost = 12
+
+
+// UH OH
+
+/obj/item/grenade/spawnergrenade/spikeroach
+	name = "spike synthroach grenade"
+	desc = "Have you ever had an idea so bad you wanted to do it multiple times? In that case- you're in luck, kid!"
+	spawner_type = /mob/living/basic/cockroach/hauberoach
+	deliveryamt = 6
+
+/datum/antag_faction_item/echoes/spikeroach_nade
+	name = "spike synthroach greande"
+	description = "Synthroaches are the remnants of old bio-synth weapons. A few survived the end of their war and the clean-up efforts, and evolved into pests that are ubiquitous on most ships. This grenade is full of 'spikeroaches', synth-roaches that were once fearsome self-detonating drones and are now...still self-detonating drones. WARNING: hostile to all non-roaches, including the user!"
+	item = /obj/item/grenade/spawnergrenade/spikeroach
+	cost = 6

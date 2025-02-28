@@ -6,9 +6,9 @@
 	faction_category = /datum/uplink_category/faction_special/echoes
 	entry_line = span_boldnotice("You take in a deep breath. Yelling and breach alarms; maybe a flashback to the explanation on why you were hired, maybe a slice of memory. Either way, you know why the hate is so mutual. And you have a job to do.")
 
-/datum/uplink_category/faction_special/thinktank
+/datum/uplink_category/faction_special/echoes
 	name = "Research Operative Issued Equipment"
 	weight = 100
 
-/datum/antag_faction_item/thinktank
-	faction = /datum/antag_faction/thinktank
+/datum/antag_faction_item/echoes
+	faction = /datum/antag_faction/echoes

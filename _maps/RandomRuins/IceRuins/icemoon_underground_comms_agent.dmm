@@ -40,7 +40,7 @@
 /turf/open/misc/asteroid/snow/standard_air,
 /area/ruin/comms_agent)
 "di" = (
-/obj/effect/turf_decal/siding/wood{
+/obj/structure/railing{
 	dir = 1
 	},
 /turf/open/lava/plasma/ice_moon,
@@ -93,10 +93,7 @@
 /turf/open/floor/carpet,
 /area/ruin/comms_agent)
 "gv" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
-	},
-/turf/open/lava/plasma/ice_moon,
+/turf/closed/wall/ice,
 /area/icemoon/underground/explored)
 "gY" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -123,7 +120,7 @@
 /turf/open/floor/wood,
 /area/ruin/comms_agent)
 "ig" = (
-/obj/effect/turf_decal/siding/wood,
+/obj/structure/railing,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "ij" = (
@@ -137,7 +134,7 @@
 /turf/open/floor/wood,
 /area/ruin/comms_agent)
 "iZ" = (
-/obj/effect/turf_decal/siding/wood{
+/obj/structure/railing{
 	dir = 1
 	},
 /turf/open/misc/asteroid/snow/icemoon,
@@ -160,10 +157,9 @@
 /turf/open/space/basic,
 /area/ruin/comms_agent)
 "kA" = (
-/obj/effect/turf_decal/siding/wood,
-/obj/structure/fluff/fokoff_sign,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/icemoon/underground/explored)
+/obj/structure/closet/emcloset,
+/turf/open/floor/wood/parquet,
+/area/ruin/comms_agent)
 "kB" = (
 /obj/structure/cable,
 /obj/structure/sign/poster/contraband/random/directional/east,
@@ -276,6 +272,7 @@
 /obj/item/flashlight,
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/tank/internals/emergency_oxygen,
+/obj/item/stack/rods/twentyfive,
 /turf/open/floor/wood/parquet,
 /area/ruin/comms_agent)
 "rA" = (
@@ -287,7 +284,7 @@
 /obj/effect/decal/cleanable/blood/splatter/over_window{
 	pixel_y = 32
 	},
-/obj/structure/sign/poster/official/nanotrasen_logo/directional/north,
+/obj/structure/sign/poster/official/plasma_effects/directional/north,
 /turf/open/floor/wood/parquet,
 /area/ruin/comms_agent)
 "sB" = (
@@ -295,19 +292,30 @@
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "tb" = (
-/obj/machinery/power/port_gen/pacman,
 /obj/structure/cable,
+/obj/machinery/power/micro_reactor,
 /turf/open/floor/plating,
 /area/ruin/comms_agent/maint)
 "tl" = (
 /turf/closed/mineral/snowmountain/cavern/icemoon,
 /area/icemoon/underground/explored)
 "tp" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 4
+/obj/machinery/door/window,
+/obj/structure/closet/crate/secure/weapon,
+/obj/item/ammo_box/a357{
+	icon_state = "357-7";
+	pixel_x = 2
 	},
-/turf/open/lava/plasma/ice_moon,
-/area/icemoon/underground/explored)
+/obj/item/ammo_box/a357{
+	icon_state = "357-7";
+	pixel_y = 3
+	},
+/obj/item/gun/ballistic/revolver/badass{
+	pixel_x = -1;
+	pixel_y = 2
+	},
+/turf/open/floor/stone,
+/area/ruin/comms_agent)
 "tu" = (
 /obj/structure/table,
 /obj/item/lighter/skull{
@@ -384,6 +392,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
+"wF" = (
+/obj/item/stack/rods,
+/turf/open/misc/asteroid/snow/icemoon,
+/area/icemoon/underground/explored)
 "xi" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/misc/asteroid/snow/standard_air,
@@ -450,7 +462,7 @@
 /turf/closed/wall,
 /area/ruin/comms_agent)
 "BD" = (
-/obj/effect/turf_decal/siding/wood/corner{
+/obj/structure/railing/corner/end/flip{
 	dir = 8
 	},
 /turf/open/misc/asteroid/snow/icemoon,
@@ -489,7 +501,7 @@
 /area/ruin/comms_agent/maint)
 "CW" = (
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
-/obj/structure/closet/emcloset,
+/obj/machinery/power/port_gen/pacman,
 /turf/open/floor/plating,
 /area/ruin/comms_agent/maint)
 "DH" = (
@@ -523,9 +535,13 @@
 /area/ruin/comms_agent)
 "FL" = (
 /obj/structure/table/wood,
-/obj/item/multitool,
 /obj/machinery/airalarm/directional/west,
 /obj/effect/mapping_helpers/airalarm/syndicate_access,
+/obj/item/construction/rcd/combat,
+/obj/item/multitool{
+	pixel_x = 8;
+	pixel_y = 3
+	},
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
 "FZ" = (
@@ -589,7 +605,9 @@
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
 "Ie" = (
-/obj/effect/turf_decal/siding/wood/corner,
+/obj/structure/railing/corner/end{
+	dir = 4
+	},
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "IJ" = (
@@ -655,7 +673,7 @@
 /turf/open/floor/wood/parquet,
 /area/ruin/comms_agent)
 "KQ" = (
-/turf/open/genturf,
+/turf/open/misc/asteroid/snow/icemoon,
 /area/template_noop)
 "KR" = (
 /obj/effect/baseturf_helper/asteroid/snow,
@@ -783,10 +801,8 @@
 /turf/closed/wall/r_wall,
 /area/ruin/comms_agent/maint)
 "Ok" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 1
-	},
-/turf/open/misc/asteroid/snow/icemoon,
+/obj/structure/railing,
+/turf/open/lava/plasma/ice_moon,
 /area/icemoon/underground/explored)
 "Oy" = (
 /obj/effect/decal/cleanable/dirt,
@@ -807,10 +823,8 @@
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
 "PC" = (
-/obj/effect/turf_decal/siding/wood/corner{
-	dir = 4
-	},
-/turf/open/misc/asteroid/snow/icemoon,
+/obj/structure/lattice/catwalk/mining,
+/turf/open/lava/plasma/ice_moon,
 /area/icemoon/underground/explored)
 "PX" = (
 /obj/item/storage/toolbox/fishing{
@@ -2523,7 +2537,7 @@ OM
 MH
 MH
 MH
-tl
+nP
 nP
 qE
 nP
@@ -2580,8 +2594,8 @@ OM
 MH
 MH
 tl
-tl
 nP
+tp
 YA
 VN
 Uw
@@ -2637,7 +2651,7 @@ OM
 MH
 MH
 tl
-tl
+nP
 nP
 sc
 gt
@@ -2756,7 +2770,7 @@ nP
 nP
 Uv
 GQ
-YA
+kA
 nP
 bk
 nP
@@ -2870,8 +2884,8 @@ MH
 MH
 MH
 MH
-MH
-MH
+gv
+gv
 KQ
 tl
 YX
@@ -2927,7 +2941,7 @@ MH
 MH
 MH
 MH
-MH
+gv
 KQ
 KQ
 tl
@@ -2984,7 +2998,7 @@ OM
 MH
 MH
 MH
-MH
+gv
 KQ
 KQ
 KQ
@@ -3039,10 +3053,10 @@ OM
 OM
 Ie
 OM
-PC
+OM
 MH
 MH
-MH
+gv
 KQ
 KQ
 tl
@@ -3096,7 +3110,7 @@ OM
 OM
 ig
 Lz
-iZ
+OM
 sB
 MH
 MH
@@ -3151,7 +3165,7 @@ OB
 OB
 OB
 OM
-kA
+ig
 Lz
 iZ
 OM
@@ -3208,9 +3222,9 @@ OB
 OB
 OB
 OB
+Ok
+PC
 OB
-OB
-gv
 OM
 OM
 OM
@@ -3266,7 +3280,7 @@ OB
 OB
 OB
 OB
-OB
+PC
 OB
 OB
 OB
@@ -3495,7 +3509,7 @@ OB
 OB
 OB
 OB
-tp
+OB
 OB
 OB
 OB
@@ -3551,7 +3565,7 @@ MH
 OB
 OB
 OB
-Lz
+PC
 di
 OB
 OB
@@ -3609,7 +3623,7 @@ MH
 OB
 ig
 Lz
-iZ
+OM
 OB
 OB
 OB
@@ -3666,7 +3680,7 @@ MH
 OM
 BD
 OM
-Ok
+OM
 OB
 MH
 MH
@@ -3722,7 +3736,7 @@ MH
 MH
 OM
 OM
-OM
+wF
 OM
 OM
 OM

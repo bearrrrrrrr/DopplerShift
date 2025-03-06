@@ -120,7 +120,7 @@
 /turf/open/floor/wood,
 /area/ruin/comms_agent)
 "ig" = (
-/obj/structure/railing,
+/obj/item/stack/rods,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "ij" = (
@@ -157,9 +157,9 @@
 /turf/open/space/basic,
 /area/ruin/comms_agent)
 "kA" = (
-/obj/structure/closet/emcloset,
-/turf/open/floor/wood/parquet,
-/area/ruin/comms_agent)
+/obj/structure/railing,
+/turf/open/misc/asteroid/snow/icemoon,
+/area/icemoon/underground/explored)
 "kB" = (
 /obj/structure/cable,
 /obj/structure/sign/poster/contraband/random/directional/east,
@@ -273,6 +273,7 @@
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/stack/rods/twentyfive,
+/obj/item/clothing/glasses/meson/night,
 /turf/open/floor/wood/parquet,
 /area/ruin/comms_agent)
 "rA" = (
@@ -302,18 +303,9 @@
 "tp" = (
 /obj/machinery/door/window,
 /obj/structure/closet/crate/secure/weapon,
-/obj/item/ammo_box/a357{
-	icon_state = "357-7";
-	pixel_x = 2
-	},
-/obj/item/ammo_box/a357{
-	icon_state = "357-7";
-	pixel_y = 3
-	},
-/obj/item/gun/ballistic/revolver/badass{
-	pixel_x = -1;
-	pixel_y = 2
-	},
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/magazine/m223,
+/obj/item/gun/ballistic/automatic/m90,
 /turf/open/floor/stone,
 /area/ruin/comms_agent)
 "tu" = (
@@ -392,10 +384,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/wood/tile,
 /area/ruin/comms_agent)
-"wF" = (
-/obj/item/stack/rods,
-/turf/open/misc/asteroid/snow/icemoon,
-/area/icemoon/underground/explored)
 "xi" = (
 /obj/machinery/hydroponics/soil,
 /turf/open/misc/asteroid/snow/standard_air,
@@ -775,6 +763,10 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/ruin/comms_agent/maint)
+"MS" = (
+/obj/structure/railing,
+/turf/open/lava/plasma/ice_moon,
+/area/icemoon/underground/explored)
 "Ng" = (
 /obj/item/chair/wood/wings,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -801,9 +793,9 @@
 /turf/closed/wall/r_wall,
 /area/ruin/comms_agent/maint)
 "Ok" = (
-/obj/structure/railing,
-/turf/open/lava/plasma/ice_moon,
-/area/icemoon/underground/explored)
+/obj/structure/closet/emcloset,
+/turf/open/floor/wood/parquet,
+/area/ruin/comms_agent)
 "Oy" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable,
@@ -2770,7 +2762,7 @@ nP
 nP
 Uv
 GQ
-kA
+Ok
 nP
 bk
 nP
@@ -3108,7 +3100,7 @@ OB
 OB
 OM
 OM
-ig
+kA
 Lz
 OM
 sB
@@ -3165,7 +3157,7 @@ OB
 OB
 OB
 OM
-ig
+kA
 Lz
 iZ
 OM
@@ -3222,7 +3214,7 @@ OB
 OB
 OB
 OB
-Ok
+MS
 PC
 OB
 OM
@@ -3621,7 +3613,7 @@ MH
 MH
 MH
 OB
-ig
+kA
 Lz
 OM
 OB
@@ -3736,7 +3728,7 @@ MH
 MH
 OM
 OM
-wF
+ig
 OM
 OM
 OM

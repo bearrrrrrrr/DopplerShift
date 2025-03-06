@@ -93,7 +93,8 @@
 /turf/open/floor/carpet,
 /area/ruin/comms_agent)
 "gv" = (
-/turf/closed/wall/ice,
+/obj/item/stack/rods,
+/turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "gY" = (
 /obj/effect/decal/cleanable/dirt/dust,
@@ -120,7 +121,7 @@
 /turf/open/floor/wood,
 /area/ruin/comms_agent)
 "ig" = (
-/obj/item/stack/rods,
+/obj/structure/railing,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
 "ij" = (
@@ -143,6 +144,14 @@
 /obj/structure/flora/tree/pine/style_random,
 /turf/open/misc/asteroid/snow/icemoon,
 /area/icemoon/underground/explored)
+"jv" = (
+/obj/machinery/door/window,
+/obj/structure/closet/crate/secure/weapon,
+/obj/item/ammo_box/c10mm,
+/obj/item/ammo_box/magazine/m223,
+/obj/item/gun/ballistic/automatic/m90,
+/turf/open/floor/stone,
+/area/ruin/comms_agent)
 "jB" = (
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer2{
 	dir = 4
@@ -157,8 +166,7 @@
 /turf/open/space/basic,
 /area/ruin/comms_agent)
 "kA" = (
-/obj/structure/railing,
-/turf/open/misc/asteroid/snow/icemoon,
+/turf/closed/wall/ice,
 /area/icemoon/underground/explored)
 "kB" = (
 /obj/structure/cable,
@@ -273,7 +281,7 @@
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/tank/internals/emergency_oxygen,
 /obj/item/stack/rods/twentyfive,
-/obj/item/clothing/glasses/meson/night,
+/obj/item/clothing/glasses/thermal/syndi,
 /turf/open/floor/wood/parquet,
 /area/ruin/comms_agent)
 "rA" = (
@@ -301,13 +309,9 @@
 /turf/closed/mineral/snowmountain/cavern/icemoon,
 /area/icemoon/underground/explored)
 "tp" = (
-/obj/machinery/door/window,
-/obj/structure/closet/crate/secure/weapon,
-/obj/item/ammo_box/c10mm,
-/obj/item/ammo_box/magazine/m223,
-/obj/item/gun/ballistic/automatic/m90,
-/turf/open/floor/stone,
-/area/ruin/comms_agent)
+/obj/structure/railing,
+/turf/open/lava/plasma/ice_moon,
+/area/icemoon/underground/explored)
 "tu" = (
 /obj/structure/table,
 /obj/item/lighter/skull{
@@ -763,10 +767,6 @@
 /obj/machinery/atmospherics/pipe/smart/manifold4w/scrubbers/hidden/layer2,
 /turf/open/floor/plating,
 /area/ruin/comms_agent/maint)
-"MS" = (
-/obj/structure/railing,
-/turf/open/lava/plasma/ice_moon,
-/area/icemoon/underground/explored)
 "Ng" = (
 /obj/item/chair/wood/wings,
 /obj/effect/decal/cleanable/dirt/dust,
@@ -2587,7 +2587,7 @@ MH
 MH
 tl
 nP
-tp
+jv
 YA
 VN
 Uw
@@ -2876,8 +2876,8 @@ MH
 MH
 MH
 MH
-gv
-gv
+kA
+kA
 KQ
 tl
 YX
@@ -2933,7 +2933,7 @@ MH
 MH
 MH
 MH
-gv
+kA
 KQ
 KQ
 tl
@@ -2990,7 +2990,7 @@ OM
 MH
 MH
 MH
-gv
+kA
 KQ
 KQ
 KQ
@@ -3048,7 +3048,7 @@ OM
 OM
 MH
 MH
-gv
+kA
 KQ
 KQ
 tl
@@ -3100,7 +3100,7 @@ OB
 OB
 OM
 OM
-kA
+ig
 Lz
 OM
 sB
@@ -3157,7 +3157,7 @@ OB
 OB
 OB
 OM
-kA
+ig
 Lz
 iZ
 OM
@@ -3214,7 +3214,7 @@ OB
 OB
 OB
 OB
-MS
+tp
 PC
 OB
 OM
@@ -3613,7 +3613,7 @@ MH
 MH
 MH
 OB
-kA
+ig
 Lz
 OM
 OB
@@ -3728,7 +3728,7 @@ MH
 MH
 OM
 OM
-ig
+gv
 OM
 OM
 OM

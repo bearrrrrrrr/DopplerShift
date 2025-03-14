@@ -30,6 +30,9 @@
 /datum/language/xenocommon
 	secret = TRUE
 
+/datum/language/nekomimetic
+	secret = TRUE  //...and so it vanished, a whisper in the darkness.
+
 /datum/language/shadowtongue
 	name = "Shadowtongue"
 	desc = "TONGUE OF A REALITY PLANE OFFSET FIVE INCHES ABOVE YOURS; the language of Resonance and Magycks, spoken by sorcerers and reality-benders. The language their olden books are oft written in."
@@ -42,3 +45,4 @@
 
 /datum/language/uncommon
 	name = "Xerxian"
+	desc = "A modernization of the Arabic dialects found on Earth, loosely based on the original MSA (Modern Standardized Arabic). Simplified syntax and a reduced reliance on case-endings and diacritical marks make it easier to learn and read."

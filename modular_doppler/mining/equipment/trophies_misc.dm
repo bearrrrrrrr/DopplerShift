@@ -2,7 +2,8 @@
 /obj/item/crusher_trophy/skill_check
 	name = "kinesics-checker"
 	desc = "An upgrade for the already-clunky crusher. Uses a momentum-storage system to turn power from swings into devastating detonations. Also called the skill checker."
-	icon_state = "demon_claws"
+	icon = 'icons/obj/devices/circuitry_n_data.dmi'
+	icon_state = "circuit_map"
 	denied_type = /obj/item/crusher_trophy/skill_check
 	bonus_value = 10
 
@@ -12,17 +13,17 @@
 /obj/item/crusher_trophy/skill_check/add_to(obj/item/kinetic_crusher/pkc, mob/living/user)
 	. = ..()
 
-	pkc.backstab_bonus *= 3 //Good Enough.
-	AddComponent(/datum/component/two_handed, force_wielded=(force_wielded*0.75))
+	pkc.backstab_bonus *= 3
+	AddComponent(/datum/component/two_handed, force_wielded=15)
 
 /obj/item/crusher_trophy/skill_check/remove_from(obj/item/kinetic_crusher/pkc, mob/living/user)
 	. = ..()
 
-	pkc.backstab_bonus /= 3 //Good Enough
-	AddComponent(/datum/component/two_handed, force_wielded=(force_wielded/1.25))
+	pkc.backstab_bonus /= 3
+	AddComponent(/datum/component/two_handed, force_wielded=20)
 
 
-//dude it's fine
+//belt slot pkc, i actually don't think this is that good lol???
 
 /obj/item/crusher_trophy/pkc_sling
 	name = "PKC sling"

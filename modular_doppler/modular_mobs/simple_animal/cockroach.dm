@@ -10,7 +10,7 @@
 	icon_state = "synthroach"
 	icon_dead = "synthroach_no_animation"
 
-/mob/living/basic/cockroach/glockroach() //have to do this for some reason
+/mob/living/basic/cockroach/glockroach/emp_act() //emp's were killing them for some reason i just can not explain. idfk.
 	return FALSE
 
 /mob/living/basic/cockroach/hauberoach
@@ -20,7 +20,7 @@
 	icon_state = "spikeroach"
 	icon_dead = "synthroach_no_animation"
 
-/mob/living/basic/cockroach/hauberoach() //have to do this for some reason
+/mob/living/basic/cockroach/hauberoach/emp_act()
 	return FALSE
 
 /mob/living/basic/cockroach/glockroach/mobroach
@@ -29,5 +29,5 @@
 	icon = 'modular_doppler/modular_mobs/simple_animal/synthroach.dmi'
 	icon_state = "gunroach"
 
-/mob/living/basic/cockroach/mobroach() //have to do this for some reason
+/mob/living/basic/cockroach/glockroach/mobroach/emp_act()
 	return FALSE

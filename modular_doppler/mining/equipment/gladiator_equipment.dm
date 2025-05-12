@@ -31,7 +31,7 @@
 	name = "cloak of the marked one"
 	desc = "A cloak worn by those that have faced death in the eyes and prevailed."
 	icon = 'modular_skyrat/modules/gladiator/icons/berserk_icons.dmi'
-	worn_icon = 'modular_skyrat/modules/gladiator/icons/berserk_suit.dmi'
+	worn_icon = 'modular_doppler/mining/equipment/berserk_suit.dmi'
 	icon_state = "berk_cape"
 	inhand_icon_state = "" //lul
 	uses_advanced_reskins = FALSE
@@ -46,8 +46,8 @@
 	desc = "A suit of ancient body armor imbued with potent spiritual magnetism, capable of massively boosting a wearer's close combat skills at the cost of ravaging their mind and overexerting their body."
 	icon_state = "berk_suit"
 	icon = 'modular_skyrat/modules/gladiator/icons/berserk_icons.dmi'
-	worn_icon = 'modular_skyrat/modules/gladiator/icons/berserk_suit.dmi'
-	worn_icon_digi = 'modular_skyrat/modules/gladiator/icons/berserk_suit_digi.dmi'
+	worn_icon = 'modular_doppler/mining/equipment/berserk_suit.dmi'
+	worn_icon_digi = 'modular_doppler/mining/equipment/berserk_suit_digi.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/berserker/gatsu
 	w_class = WEIGHT_CLASS_BULKY
 	armor_type = /datum/armor/berserker_gatsu
@@ -67,7 +67,7 @@
 	desc = "A uniquely styled helmet with ghastly red eyes that seals it's user inside."
 	icon_state = "berk_helm"
 	icon = 'modular_skyrat/modules/gladiator/icons/berserk_icons.dmi'
-	worn_icon = 'modular_skyrat/modules/gladiator/icons/berserk_suit.dmi'
+	worn_icon = 'modular_doppler/mining/equipment/berserk_suit.dmi'
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	armor_type = /datum/armor/berserker_gatsu
 	resistance_flags = INDESTRUCTIBLE
@@ -111,17 +111,17 @@
 /obj/item/claymore/dragonslayer
 	name = "\proper Dragonslayer"
 	desc = "A blade that seems too big to be called a sword. Too big, too thick, too heavy, and too rough, it's more like a large hunk of raw iron."
-	icon = 'modular_skyrat/modules/gladiator/icons/dragonslayer.dmi'
+	icon = 'modular_doppler/mining/equipment/dragonslayer.dmi'
 	icon_state = "dragonslayer"
 	inhand_icon_state = "dragonslayer"
-	lefthand_file = 'modular_skyrat/master_files/icons/mob/64x64_lefthand.dmi'
-	righthand_file = 'modular_skyrat/master_files/icons/mob/64x64_righthand.dmi'
+	lefthand_file = 'modular_doppler/mining/equipment/64x64_lefthand.dmi'
+	righthand_file = 'modular_doppler/mining/equipment/mob/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
 	hitsound = 'modular_skyrat/master_files/sound/weapons/bloodyslice.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = null
-	force = 20
+	force = 30
 	wound_bonus = 10
 	bare_wound_bonus = 5
 	resistance_flags = INDESTRUCTIBLE
@@ -130,7 +130,7 @@
 	sharpness = SHARP_EDGED
 	item_flags = NO_BLOOD_ON_ITEM
 	// aughhghghgh this really should be elementized but this works for now
-	var/faction_bonus_force = 40
+	var/faction_bonus_force = 30
 	var/static/list/nemesis_factions = list("mining", "boss")
 	/// how much stamina does it cost to roll
 	var/roll_stamcost = 10

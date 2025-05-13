@@ -30,7 +30,7 @@
 /obj/item/clothing/neck/warrior_cape
 	name = "cloak of the marked one"
 	desc = "A cloak worn by those that have faced death in the eyes and prevailed."
-	icon = 'modular_skyrat/modules/gladiator/icons/berserk_icons.dmi'
+	icon = 'modular_doppler/mining/equipment/berserk_icons.dmi'
 	worn_icon = 'modular_doppler/mining/equipment/berserk_suit.dmi'
 	icon_state = "berk_cape"
 	inhand_icon_state = "" //lul
@@ -45,13 +45,17 @@
 	name = "berserker armor"
 	desc = "A suit of ancient body armor imbued with potent spiritual magnetism, capable of massively boosting a wearer's close combat skills at the cost of ravaging their mind and overexerting their body."
 	icon_state = "berk_suit"
-	icon = 'modular_skyrat/modules/gladiator/icons/berserk_icons.dmi'
+	icon = 'modular_doppler/mining/equipment/berserk_icons.dmi'
 	worn_icon = 'modular_doppler/mining/equipment/berserk_suit.dmi'
-	worn_icon_digi = 'modular_doppler/mining/equipment/berserk_suit_digi.dmi'
 	hoodtype = /obj/item/clothing/head/hooded/berserker/gatsu
 	w_class = WEIGHT_CLASS_BULKY
 	armor_type = /datum/armor/berserker_gatsu
 	resistance_flags = INDESTRUCTIBLE
+
+	supports_variations_flags = CLOTHING_DIGITIGRADE_VARIATION
+	supported_bodyshapes = list(BODYSHAPE_HUMANOID, BODYSHAPE_DIGITIGRADE)
+	bodyshape_icon_files = list(BODYSHAPE_HUMANOID_T = 'modular_doppler/mining/equipment/berserk_suit.dmi',
+	BODYSHAPE_DIGITIGRADE_T = 'modular_doppler/mining/equipment/berserk_suit.dmi')
 
 /obj/item/clothing/suit/hooded/berserker/gatsu/Initialize(mapload)
 	. = ..()
@@ -66,12 +70,31 @@
 	name = "berserker helmet"
 	desc = "A uniquely styled helmet with ghastly red eyes that seals it's user inside."
 	icon_state = "berk_helm"
-	icon = 'modular_skyrat/modules/gladiator/icons/berserk_icons.dmi'
+	icon = 'modular_doppler/mining/equipment/berserk_icons.dmi'
 	worn_icon = 'modular_doppler/mining/equipment/berserk_suit.dmi'
 	flags_inv = HIDEMASK|HIDEEARS|HIDEEYES|HIDEFACE|HIDEHAIR|HIDEFACIALHAIR|HIDESNOUT
 	armor_type = /datum/armor/berserker_gatsu
 	resistance_flags = INDESTRUCTIBLE
 	actions_types = list(/datum/action/item_action/berserk_mode)
+
+/datum/armor/berserker_gatsu
+	melee = 40
+	bullet = 30
+	laser = 15
+	energy = 25
+	bomb = 70
+	bio = 70
+	fire = 100
+	acid = 100
+
+/datum/armor/drake_empowerment //Modular Override: nerfs beserker armour so I can keep this armour balanced
+	laser = 10
+	energy = 0
+
+/datum/armor/drake_empowerment_gatsu
+	melee = 35
+	laser = 10
+	bomb = 20
 
 /obj/item/clothing/head/hooded/berserker/gatsu/Initialize(mapload)
 	. = ..()
@@ -115,10 +138,10 @@
 	icon_state = "dragonslayer"
 	inhand_icon_state = "dragonslayer"
 	lefthand_file = 'modular_doppler/mining/equipment/64x64_lefthand.dmi'
-	righthand_file = 'modular_doppler/mining/equipment/mob/64x64_righthand.dmi'
+	righthand_file = 'modular_doppler/mining/equipment/64x64_righthand.dmi'
 	inhand_x_dimension = 64
 	inhand_y_dimension = 64
-	hitsound = 'modular_skyrat/master_files/sound/weapons/bloodyslice.ogg'
+	hitsound = 'modular_doppler/mining/equipment/bloodyslice.ogg'
 	w_class = WEIGHT_CLASS_HUGE
 	slot_flags = null
 	force = 30

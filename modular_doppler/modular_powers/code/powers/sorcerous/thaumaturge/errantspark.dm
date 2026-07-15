@@ -1,10 +1,11 @@
 //peter gabriel
+//fast, dumb-fire spell that indiscriminately hits EVERYBODY excluding the caster (the caster will then, presumably, be hit with rocks by the ppl around them)
 
-#define ERRANT_SPARK_APC_CHARGE_AMOUNT (0.08 * STANDARD_CELL_CHARGE)
+#define ERRANT_SPARK_APC_CHARGE_AMOUNT (0.2 * STANDARD_CELL_CHARGE)
 
 /datum/power/thaumaturge/errantspark
 	name = "Errant Spark"
-	desc = "Fires powerful but inaccurate projectiles of lightning equivalent to your Affinity. Called 'Errant' because they bounce off of objects until they hit something important. Can be used to charge APCs. Will also destroy APCs if you're unlucky. \nRequires Affinity 3."
+	desc = "Fires powerful but inaccurate projectiles of lightning equivalent to your Affinity. Called 'Errant' because they will, upon discharge, hit everything. Called 'Spark' because your crewmates are going to set you on fire after you shock them. Can be used to charge APCs. \nRequires Affinity 3."
 	security_record_text = "Subject can conjure and fire unstable bolts of lightning that ricochet off nearby objects before discharging."
 	security_threat = POWER_THREAT_MAJOR
 	value = 3
@@ -15,14 +16,15 @@
 
 /datum/action/cooldown/power/thaumaturge/errant_spark
 	name = "Errant Spark"
-	desc = "Fires a powerful but inaccurate projectile of lightning equivalent to your Affinity. The spark bounces off of objects until it hits something important. Can be used to charge APCs, but will also destroy APCs if you're unlucky."
+	desc = "Fires powerful but inaccurate projectiles of lightning equivalent to your Affinity. Called 'Errant' because they will, upon discharge, hit everything. Called 'Spark' because your crewmates are going to set you on fire after you shock them. Can be used to charge APCs. \nRequires Affinity 3."
 	button_icon = 'icons/mob/actions/actions_spells.dmi'
 	button_icon_state = "lightning"
 
 	required_affinity = 3
-	prep_cost = 5
+	prep_cost = 2
 	click_to_activate = TRUE
 	anti_magic_on_target = FALSE
+	cooldown_time = 10 SECONDS
 
 /datum/action/cooldown/power/thaumaturge/errant_spark/use_action(mob/living/user, atom/target)
 	if(fire_projectile(user, target, /obj/projectile/resonant/errant_spark))
@@ -96,15 +98,10 @@
 	if(!target_apc.cell)
 		return
 
-	var/charge_amount = min(ERRANT_SPARK_APC_CHARGE_AMOUNT, target_apc.cell.maxcharge - target_apc.cell.charge)
-	if(charge_amount > 0)
+	var/charge_amount = min(ERRANT_SPARK_APC_CHARGE_AMOUNT, target_apc.cell.maxcharge - target_apc.cell.charge) //kinda gross way to do it but whatever
+	if(charge_amount > 0) //stupid tea! stupid, stupid, stupid...!!
 		target_apc.cell.give(charge_amount)
 		target_apc.visible_message(span_notice("[target_apc] crackles as [src] feeds power into it."))
 		new /obj/effect/particle_effect/sparks(get_turf(target_apc))
-
-	if(target_apc.cell.charge >= target_apc.cell.maxcharge && prob(20 + (ricochets * 10)))
-		target_apc.visible_message(span_danger("[target_apc] overloads from the errant spark!"))
-		target_apc.emp_act(EMP_LIGHT)
-		target_apc.take_damage(20 + (ricochets * 5), BURN, ENERGY)
 
 #undef ERRANT_SPARK_APC_CHARGE_AMOUNT

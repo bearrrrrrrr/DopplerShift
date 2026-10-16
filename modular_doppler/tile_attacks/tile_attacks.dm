@@ -4,13 +4,13 @@
 
 /mob/living/Initialize(mapload)
 	. = ..()
-	AddElement(/datum/element/tile_click_attack)
+	AddElement(/datum/element/tile_attacks)
 
 
 
-/datum/element/tile_click_attack
+/datum/element/tile_attacks
 
-/datum/element/tile_click_attack/Attach(datum/target)
+/datum/element/tile_attacks/Attach(datum/target)
 	. = ..()
 	if(!isliving(target))
 		return ELEMENT_INCOMPATIBLE
@@ -18,12 +18,12 @@
 	RegisterSignal(target, COMSIG_LIVING_EARLY_UNARMED_ATTACK, PROC_REF(slappies))
 	RegisterSignal(target, COMSIG_USER_ITEM_INTERACTION, PROC_REF(stabbies))
 
-/datum/element/tile_click_attack/Detach(datum/source)
+/datum/element/tile_attacks/Detach(datum/source)
 	UnregisterSignal(source, list(COMSIG_LIVING_EARLY_UNARMED_ATTACK, COMSIG_USER_ITEM_INTERACTION))
 	return ..()
 
 //for the unarmed portion
-/datum/element/tile_click_attack/proc/slappies(mob/living/source, atom/target, proximity_flag, list/modifiers)
+/datum/element/tile_attacks/proc/slappies(mob/living/source, atom/target, proximity_flag, list/modifiers)
 	SIGNAL_HANDLER
 
 	if(!proximity_flag)
@@ -39,7 +39,7 @@
 	return COMPONENT_CANCEL_ATTACK_CHAIN
 
 
-/datum/element/tile_click_attack/proc/stabbies(mob/living/source, atom/target, obj/item/tool, list/modifiers) 	// no manually added cd because the item shouuuld do that
+/datum/element/tile_attacks/proc/stabbies(mob/living/source, atom/target, obj/item/tool, list/modifiers) 	// no manually added cd because the item shouuuld do that
 	SIGNAL_HANDLER
 
 	var/mob/living/villain = get_redirect_target(source, target, modifiers)
@@ -52,7 +52,7 @@
 //checks who this should be redirected to. minor caveat; i had to pick who is prioritized and ultimately decided to pick whoever is on the highest layer
 //this probably isn't the best idea but uhhh ???? it can be changed to whatever ppl prefer so it's nbd :3
 
-/datum/element/tile_click_attack/proc/get_redirect_target(mob/living/source, atom/target, list/modifiers)
+/datum/element/tile_attacks/proc/get_redirect_target(mob/living/source, atom/target, list/modifiers)
 	if(!isturf(target))
 		return null
 	if(isnull(source.client))

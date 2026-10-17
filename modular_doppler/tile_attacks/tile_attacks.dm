@@ -51,9 +51,11 @@
 
 //checks who this should be redirected to. minor caveat; i had to pick who is prioritized and ultimately decided to pick whoever is on the highest layer
 //this probably isn't the best idea but uhhh ???? it can be changed to whatever ppl prefer so it's nbd :3
-
 /datum/element/tile_attacks/proc/get_redirect_target(mob/living/source, atom/target, list/modifiers)
-	if(!isturf(target))
+	var/turf/clicked_turf = target
+	if(istype(target, /obj/effect/decal/cleanable)) //kinda arbitrary but whatever
+		clicked_turf = target.loc
+	if(!isturf(clicked_turf))
 		return null
 	if(isnull(source.client))
 		return null
@@ -63,7 +65,7 @@
 		return null
 
 	var/mob/living/villain
-	for(var/mob/living/candidate in target)
+	for(var/mob/living/candidate in clicked_turf)
 		if(candidate == source)
 			continue
 		if(candidate.alpha < 40 || candidate.mouse_opacity == MOUSE_OPACITY_TRANSPARENT) //this should stop ppl from clicking invisible ppl

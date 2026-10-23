@@ -1,5 +1,5 @@
 /// LONG HAVE WE WAITED, TILE-CLICK ACTIVATED.
-/// Whenever u left or right click on a tile in harm intent, the click checks if there's a mob standing on the tile, and instead tries to click on that guy
+/// Whenever u left, right or ctrl click on a tile in harm intent, the click checks if there's a mob standing on the tile, and instead tries to click on that guy
 /mob/living/Initialize(mapload)
 	. = ..()
 	AddElement(/datum/element/tile_attacks)
@@ -13,9 +13,10 @@
 
 	RegisterSignal(target, COMSIG_LIVING_EARLY_UNARMED_ATTACK, PROC_REF(slappies))
 	RegisterSignals(target, list(COMSIG_USER_ITEM_INTERACTION, COMSIG_USER_ITEM_INTERACTION_SECONDARY), PROC_REF(stabbies))
+	RegisterSignal(target, COMSIG_MOB_CTRL_CLICKED, PROC_REF(grabbies))
 
 /datum/element/tile_attacks/Detach(datum/source)
-	UnregisterSignal(source, list(COMSIG_LIVING_EARLY_UNARMED_ATTACK, COMSIG_USER_ITEM_INTERACTION, COMSIG_USER_ITEM_INTERACTION_SECONDARY))
+	UnregisterSignal(source, list(COMSIG_LIVING_EARLY_UNARMED_ATTACK, COMSIG_USER_ITEM_INTERACTION, COMSIG_USER_ITEM_INTERACTION_SECONDARY, COMSIG_MOB_CTRL_CLICKED))
 	return ..()
 
 /// for the unarmed portion. right clicks get passed along in modifiers so shoving works too
@@ -44,6 +45,20 @@
 
 	INVOKE_ASYNC(tool, TYPE_PROC_REF(/obj/item, melee_attack_chain), source, villain, modifiers)
 	return ITEM_INTERACT_SUCCESS
+
+/// for grabs. ctrl clicks don't go to the attack chain so they need their own proc. no added cd needed
+/datum/element/tile_attacks/proc/grabbies(mob/living/source, atom/target)
+	SIGNAL_HANDLER
+
+	if(!source.Adjacent(target))
+		return NONE
+
+	var/mob/living/villain = get_redirect_target(source, target)
+	if(isnull(villain))
+		return NONE
+
+	INVOKE_ASYNC(source, TYPE_PROC_REF(/mob, CtrlClickOn), villain)
+	return COMSIG_MOB_CANCEL_CLICKON
 
 /// checks who this should be redirected to. whoever is on the highest layer is prioritized
 /datum/element/tile_attacks/proc/get_redirect_target(mob/living/source, atom/target, list/modifiers)
